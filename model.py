@@ -10,6 +10,7 @@ from scipy.sparse.linalg import svds
 import json
 from flask import Flask, render_template, flash, request
 import pickle
+import gzip, pickle
 
 
 
@@ -19,7 +20,9 @@ df_all = pd.read_csv('sample30.csv')
 
 #model = pickle.load(open('model.pkl', 'rb'))
 
-model = pd.read_pickle("model.pkl")
+#model = pd.read_pickle("model.pkl")
+with gzip.open('model.pkl', 'rb') as ifp:
+    model = pickle.load(ifp)
 
 
 def recommend_it(predictions_df, itm_df, original_ratings_df, num_recommendations=10,ruserId='00dog3'):
