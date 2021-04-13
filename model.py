@@ -20,6 +20,9 @@ df_all = pd.read_csv('sample30.csv')
 
 #model = pickle.load(open('model.pkl', 'rb'))
 
+model = pickle.load(open('model.pkl', 'rb'))
+model = pd.read_pickle("model.pkl")
+
 #model = pd.read_pickle("model.pkl")
 #with gzip.open('model.pkl', 'rb') as ifp:
 #    model = pickle.load(ifp)
