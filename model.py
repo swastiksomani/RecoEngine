@@ -18,10 +18,10 @@ df_recom = pd.read_csv('recommendationdata.csv')
 df_all = pd.read_csv('sample30.csv')
 #df = pd.read_csv('recompivot.csv', index_col=0)
 
-#model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open(r"model.pkl", 'rb'))
 
-model = pickle.load(open('https://github.com/swastiksomani/RecoEngine/blob/7c32d67e223335af06fdcacfdec286bb3e2aa22b/model.pkl', 'rb'))
-model = pd.read_pickle("https://github.com/swastiksomani/RecoEngine/blob/7c32d67e223335af06fdcacfdec286bb3e2aa22b/model.pkl")
+#model = pickle.load(open('https://github.com/swastiksomani/RecoEngine/blob/7c32d67e223335af06fdcacfdec286bb3e2aa22b/model.pkl', 'rb'))
+#model = pd.read_pickle("https://github.com/swastiksomani/RecoEngine/blob/7c32d67e223335af06fdcacfdec286bb3e2aa22b/model.pkl")
 
 #model = pd.read_pickle("model.pkl")
 #with gzip.open('model.pkl', 'rb') as ifp:
