@@ -135,7 +135,7 @@ def predict():
 
 
 
-        user_final_rating = pd.read_pickle("user_rating.pkl")
+        user_final_rating = pd.read_pickle("https://github.com/swastiksomani/RecoEngine/blob/695e61952e3f1387d0442146af8ced036ec0ce0e/user_rating.pkl")
 
         s = user_final_rating.loc[username].sort_values(ascending=False)[0:20]
         s = s.reset_index()
